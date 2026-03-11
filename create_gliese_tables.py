@@ -108,4 +108,3 @@ if __name__ == '__main__':
 
     db_path = sys.argv[1]
     df = load_bronze(db_path)
-    build_silver(df, db_path)
