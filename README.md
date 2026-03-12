@@ -32,7 +32,7 @@ pip install -r requirements.txt
 .
 ├── etl.py                          # Download → bronze → silver → gold pipeline
 ├── stellar_parser.py               # Spectral type string parser
-├── stellar_analysis_refactored.ipynb  # Analysis notebook (run after ETL)
+├── stellar_analysis.ipynb  # Analysis notebook (run after ETL)
 ├── schema.sql                      # DDL for all tables (documentation / reference)
 ├── requirements.txt
 └── README.md
@@ -53,13 +53,13 @@ silver uses `to_sql(if_exists="replace")`, gold drops and recreates).
 ### 2. Analysis notebook
 
 ```bash
-jupyter notebook stellar_analysis_refactored.ipynb
+jupyter notebook stellar_analysis.ipynb
 ```
 
 Or run headless:
 
 ```bash
-jupyter nbconvert --to notebook --execute stellar_analysis_refactored.ipynb
+jupyter nbconvert --to notebook --execute stellar_analysis.ipynb
 ```
 
 The notebook assumes `stellar_analysis.db` is in the working directory.
